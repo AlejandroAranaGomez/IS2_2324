@@ -1,4 +1,4 @@
-
+package es.unican.is2.franquiciasUCCommon;
 
 import java.util.List;
 

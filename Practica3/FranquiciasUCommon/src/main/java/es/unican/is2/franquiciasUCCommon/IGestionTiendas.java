@@ -1,4 +1,4 @@
-
+package es.unican.is2.franquiciasUCCommon;
 
 /**
  * Interfaz de negocio para gestionar tiendas
@@ -6,7 +6,7 @@
 public interface IGestionTiendas {
 
 	/**
-	 * Añade una nueva tienda
+	 * Aï¿½ade una nueva tienda
 	 * @param t Tienda que se desea anhadir
 	 * @return La tienda anhadida 
 	 *         null si no se anhade porque ya existe

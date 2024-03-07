@@ -1,4 +1,4 @@
-
+package es.unican.is2.franquiciasUCCommon;
 
 import java.util.List;
 /**
@@ -16,7 +16,7 @@ public interface ITiendasDAO {
 	public Tienda crearTienda(Tienda t) throws DataAccessException;
 
 	/**
-	 * Retorna la tienda cuyo id se pasa por parámetro
+	 * Retorna la tienda cuyo id se pasa por parï¿½metro
 	 * @param id Id de la tienda
 	 * @return La tienda buscada 
 	 *         null si no se encuentra
@@ -25,7 +25,7 @@ public interface ITiendasDAO {
 	public Tienda tienda(long id) throws DataAccessException;
 
 	/**
-	 * Retorna la tienda cuyo nombre se pasa por parámetro
+	 * Retorna la tienda cuyo nombre se pasa por parï¿½metro
 	 * @param nombre Nombre de la tienda
 	 * @return La tienda buscada 
 	 *         null si no se encuentra

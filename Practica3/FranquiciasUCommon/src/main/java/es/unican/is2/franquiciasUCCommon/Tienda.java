@@ -1,4 +1,4 @@
-
+package es.unican.is2.franquiciasUCCommon;
 
 import java.io.Serializable;
 import java.util.LinkedList;
@@ -60,8 +60,8 @@ public class Tienda implements Serializable {
 	}
 	
 	/**
-	 * Retorna la dirección de la tienda
-	 * @return Dirección de la tienda
+	 * Retorna la direcciï¿½n de la tienda
+	 * @return Direcciï¿½n de la tienda
 	 */
 	public String getDireccion() {
 		return direccion;

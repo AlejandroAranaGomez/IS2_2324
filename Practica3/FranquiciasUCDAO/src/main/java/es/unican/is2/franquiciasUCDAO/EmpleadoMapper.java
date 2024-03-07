@@ -1,6 +1,8 @@
+package es.unican.is2.franquiciasUCDAO;
 
 
 import java.sql.ResultSet;
+import es.unican.is2.franquiciasUCCommon.*;
 import java.sql.SQLException;
 
 /**
@@ -10,7 +12,7 @@ import java.sql.SQLException;
 public class EmpleadoMapper {
 
 	/**
-	 * Método privado de apoyo. Recibe un ResultSet de un empleado
+	 * Mï¿½todo privado de apoyo. Recibe un ResultSet de un empleado
 	 * y devuelve un objeto Empleado con los datos del ResultSet
 	 * @param results Fila resultado de una consulta en base de datos
 	 * @return Empleado

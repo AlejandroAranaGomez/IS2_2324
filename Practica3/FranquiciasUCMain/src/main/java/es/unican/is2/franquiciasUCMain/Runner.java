@@ -1,7 +1,12 @@
+package es.unican.is2.franquiciasUCMain;
+
+import es.unican.is2.franquiciasUCDAO.*;
+import es.unican.is2.franquiciasUCBusiness.*;
+import es.unican.is2.franquiciasUCGUI.*;
 
 
 /**
- * Clase principal que construye la aplicación de tres capas y lanza su ejecución
+ * Clase principal que construye la aplicaciï¿½n de tres capas y lanza su ejecuciï¿½n
  */
 public class Runner {
 
@@ -17,7 +22,7 @@ public class Runner {
 		// Crear componentes capa presentacion
 		VistaGerente vista = new VistaGerente(gTiendas, gEmpleados);
 		
-		// Lanzar ejecución (hacer visible la interfaz)
+		// Lanzar ejecuciï¿½n (hacer visible la interfaz)
 		vista.setVisible(true);
 		
 	

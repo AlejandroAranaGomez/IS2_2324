@@ -1,6 +1,8 @@
+package es.unican.is2.franquiciasUCGUI;
 
 
 import javax.swing.JFrame;
+import es.unican.is2.franquiciasUCCommon.*;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.DefaultListModel;

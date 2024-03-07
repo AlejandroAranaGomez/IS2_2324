@@ -1,4 +1,4 @@
-
+package es.unican.is2.franquiciasUCCommon;
 
 
 import java.time.LocalDate;
@@ -88,7 +88,7 @@ public class Empleado {
 	}
 	
 	/**
-	 * Retorna si el empleado está de baja
+	 * Retorna si el empleado estï¿½ de baja
 	 * @return true si esta de baja
 	 *         false si no lo esta
 	 */

@@ -1,6 +1,7 @@
-
+package es.unican.is2.franquiciasUCDAO;
 
 import java.sql.Connection;
+import es.unican.is2.franquiciasUCCommon.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
