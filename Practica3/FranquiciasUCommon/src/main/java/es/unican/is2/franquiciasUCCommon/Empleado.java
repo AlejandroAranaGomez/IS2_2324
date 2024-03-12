@@ -36,8 +36,40 @@ public class Empleado {
 	 * Retorna el sueldo bruto del empleado
 	 */
 	public double sueldoBruto() {
-		// TODO
-		return 0;
+		double sueldoFinal = 0.0;
+		LocalDate fechaActual = LocalDate.now();
+		
+		Categoria categoria = getCategoria();
+		
+		switch (categoria) {
+        case ENCARGADO:
+            sueldoFinal = 2000;
+            break;
+        case VENDEDOR:
+        	sueldoFinal = 1500;
+            break;
+        case AUXILIAR:
+        	sueldoFinal = 1000;
+            break;
+        default:
+            System.out.println("Cargo no válido");
+            return 0.0;
+    }
+		
+		if (getBaja()) {
+			sueldoFinal = sueldoFinal * 0.75;
+		}
+		
+		
+		if ((fechaActual.minusYears(20)).isAfter(getFechaContratacion())) {
+			sueldoFinal += 200;
+		} else if ((fechaActual.minusYears(10)).isAfter(getFechaContratacion())) {
+			sueldoFinal += 100;
+		} else if ((fechaActual.minusYears(5)).isAfter(getFechaContratacion())) {
+			sueldoFinal += 50;
+		}
+		
+		return sueldoFinal;
 	}
 	
 	/** 

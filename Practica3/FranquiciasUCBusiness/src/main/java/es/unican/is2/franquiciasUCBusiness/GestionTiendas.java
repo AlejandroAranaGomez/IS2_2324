@@ -1,31 +1,44 @@
 package es.unican.is2.franquiciasUCBusiness;
 
+
 import es.unican.is2.franquiciasUCCommon.*;
 
 public class GestionTiendas implements IGestionTiendas {
 	
-	 private static ITiendasDAO itiendasDAO; 
-	
-	public GestionTiendas(ITiendasDAO itiendasDAO) {
-		this.itiendasDAO = itiendasDAO;
+	 private ITiendasDAO itiendasDAO;
+	 
+	public GestionTiendas(ITiendasDAO tiendasDAO) {
+		this.itiendasDAO = tiendasDAO;
 	}
 
 	@Override
 	public Tienda nuevaTienda(Tienda t) throws DataAccessException {
-		// TODO Auto-generated method stub
-		return null;
+		
+		if (itiendasDAO.tiendas().contains(t)) {
+			return null;
+		}
+		
+		itiendasDAO.crearTienda(t);
+		return t;
 	}
 
 	@Override
 	public Tienda eliminarTienda(String nombre) throws OperacionNoValidaException, DataAccessException {
-		// TODO Auto-generated method stub
-		return null;
+		Tienda tienda = tienda(nombre);
+		if (tienda == null) {
+			return null;
+		}
+		
+		if (!tienda.getEmpleados().isEmpty()) {
+			throw new OperacionNoValidaException(nombre);
+		}
+		
+		return itiendasDAO.eliminarTienda(tienda.getId());
 	}
 
 	@Override
 	public Tienda tienda(String nombre) throws DataAccessException {
-		// TODO Auto-generated method stub
-		return null;
+		return itiendasDAO.tiendaPorNombre(nombre);
 	}
 
 	 
