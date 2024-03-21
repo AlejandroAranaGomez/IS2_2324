@@ -24,8 +24,19 @@ public class Empleado {
 	 * @param nombre
 	 * @param categoria
 	 * @param fechaContratacion
+	 * @throws OperacionNoValidaException 
 	 */
-	public Empleado(String DNI, String nombre, Categoria categoria, LocalDate fechaContratacion) {
+	public Empleado(String DNI, String nombre, Categoria categoria, LocalDate fechaContratacion) 
+			throws OperacionNoValidaException, NullPointerException {
+		
+		if (DNI == null || nombre == null || categoria == null || fechaContratacion == null) {
+			throw new NullPointerException();
+		}
+		
+		if (fechaContratacion.isAfter(LocalDate.now())) {
+			throw new OperacionNoValidaException("No se puede contratar a un empleado con fecha posterior a hoy.");
+		}
+		
 		this.nombre = nombre;
 		this.DNI=DNI;
 		this.categoria=categoria;
